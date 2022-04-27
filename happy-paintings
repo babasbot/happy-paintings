@@ -1,0 +1,181 @@
+#!/bin/bash
+
+# Regular Colors
+BLACK=0
+RED=1
+GREEN=2
+YELLOW=3
+BLUE=4
+MAGENTA=5
+CYAN=6
+WHITE=7
+
+# Bright Colors
+BRIGHT_BLACK=8
+BRIGHT_RED=9
+BRIGHT_GREEN=10
+BRIGHT_YELLOW=11
+BRIGHT_BLUE=12
+BRIGHT_MAGENTA=13
+BRIGHT_CYAN=14
+BRIGHT_WHITE=15
+
+function reset_attr () {
+	tput sgr0
+}
+
+function bold () {
+	cat | sed -r "s/.*/$(tput bold)&$(reset_attr)/"
+}
+
+function blink () {
+	cat | sed -r "s/.*/$(tput blink)&$(reset_attr)/"
+}
+
+function underline () {
+	cat | sed -r "s/.*/$(tput smul)&$(tput rmul)/"
+}
+
+function italic () {
+	cat | sed -r "s/.*/$(tput sitm)&$(tput ritm)/"
+}
+
+function highlight () {
+	cat | sed -r "s/.*/$(tput rev)&$(reset_attr)/"
+}
+
+function set_fg () {
+	tput setaf $1
+}
+
+function black () {
+	cat | sed -r "s/.*/$(set_fg $BLACK)&$(reset_attr)/"
+}
+
+function red () {
+	cat | sed -r "s/.*/$(set_fg $RED)&$(reset_attr)/"
+}
+
+function green () {
+	cat | sed -r "s/.*/$(set_fg $GREEN)&$(reset_attr)/"
+}
+
+function yellow () {
+	cat | sed -r "s/.*/$(set_fg $YELLOW)&$(reset_attr)/"
+}
+
+function blue () {
+	cat | sed -r "s/.*/$(set_fg $BLUE)&$(reset_attr)/"
+}
+
+function magenta () {
+	cat | sed -r "s/.*/$(set_fg $MAGENTA)&$(reset_attr)/"
+}
+
+function cyan () {
+	cat | sed -r "s/.*/$(set_fg $CYAN)&$(reset_attr)/"
+}
+
+function white () {
+	cat | sed -r "s/.*/$(set_fg $WHITE)&$(reset_attr)/"
+}
+
+function bright_black () {
+	cat | sed -r "s/.*/$(set_fg $BRIGHT_BLACK)&$(reset_attr)/"
+}
+
+function bright_red () {
+	cat | sed -r "s/.*/$(set_fg $BRIGHT_RED)&$(reset_attr)/"
+}
+
+function bright_green () {
+	cat | sed -r "s/.*/$(set_fg $BRIGHT_GREEN)&$(reset_attr)/"
+}
+
+function bright_yellow () {
+	cat | sed -r "s/.*/$(set_fg $BRIGHT_YELLOW)&$(reset_attr)/"
+}
+
+function bright_blue () {
+	cat | sed -r "s/.*/$(set_fg $BRIGHT_BLUE)&$(reset_attr)/"
+}
+
+function bright_magenta () {
+	cat | sed -r "s/.*/$(set_fg $BRIGHT_MAGENTA)&$(reset_attr)/"
+}
+
+function bright_cyan () {
+	cat | sed -r "s/.*/$(set_fg $BRIGHT_CYAN)&$(reset_attr)/"
+}
+
+function bright_white () {
+	cat | sed -r "s/.*/$(set_fg $BRIGHT_WHITE)&$(reset_attr)/"
+}
+
+function set_bg () {
+	tput setab $1
+}
+
+function bg_black () {
+	cat | sed -r "s/.*/$(set_bg $BLACK)&$(reset_attr)/"
+}
+
+function bg_red () {
+	cat | sed -r "s/.*/$(set_bg $RED)&$(reset_attr)/"
+}
+
+function bg_green () {
+	cat | sed -r "s/.*/$(set_bg $GREEN)&$(reset_attr)/"
+}
+
+function bg_yellow () {
+	cat | sed -r "s/.*/$(set_bg $YELLOW)&$(reset_attr)/"
+}
+
+function bg_blue () {
+	cat | sed -r "s/.*/$(set_bg $BLUE)&$(reset_attr)/"
+}
+
+function bg_magenta () {
+	cat | sed -r "s/.*/$(set_bg $MAGENTA)&$(reset_attr)/"
+}
+
+function bg_cyan () {
+	cat | sed -r "s/.*/$(set_bg $CYAN)&$(reset_attr)/"
+}
+
+function bg_white () {
+	cat | sed -r "s/.*/$(set_bg $WHITE)&$(reset_attr)/"
+}
+
+function bg_bright_black () {
+	cat | sed -r "s/.*/$(set_bg $BRIGHT_BLACK)&$(reset_attr)/"
+}
+
+function bg_bright_red () {
+	cat | sed -r "s/.*/$(set_bg $BRIGHT_RED)&$(reset_attr)/"
+}
+
+function bg_bright_green () {
+	cat | sed -r "s/.*/$(set_bg $BRIGHT_GREEN)&$(reset_attr)/"
+}
+
+function bg_bright_yellow () {
+	cat | sed -r "s/.*/$(set_bg $BRIGHT_YELLOW)&$(reset_attr)/"
+}
+
+function bg_bright_blue () {
+	cat | sed -r "s/.*/$(set_bg $BRIGHT_BLUE)&$(reset_attr)/"
+}
+
+function bg_bright_magenta () {
+	cat | sed -r "s/.*/$(set_bg $BRIGHT_MAGENTA)&$(reset_attr)/"
+}
+
+function bg_bright_cyan () {
+	cat | sed -r "s/.*/$(set_bg $BRIGHT_CYAN)&$(reset_attr)/"
+}
+
+function bg_bright_white () {
+	cat | sed -r "s/.*/$(set_bg $BRIGHT_WHITE)&$(reset_attr)/"
+}
